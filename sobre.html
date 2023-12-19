@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23A6C6D3' /%3E%3C/svg%3E" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap" rel="stylesheet">
+	<title>Cat and Sandbox | Sobre</title>
+	<link rel="stylesheet" href="style-sobre.css">
+</head>
+<body>
+<header>
+	<div class="logo_img">
+		<a href=""><img src="img/logo.png" alt="logo"></a>
+	</div>
+	<div class="menus">
+		<div class="menu-toggle" onclick="toggleMenu()">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+	</div>
+</header>
+<div class="menus">
+	<nav class="menu">
+		<ul>
+			<li><a  href="index.html">Home</a></li>
+			<li><a href="#">Serviços</a></li>
+			<li><a href="#">Contato</a></li>
+			<li><a class="ativado" href="#">Quem Somos</a></li>
+		</ul>
+	</nav>
+</div>
+<div class="intro">
+	<h1>Nossa história</h1>
+	<img src="img/my.jpg" alt="gato">
+	<p>Na ilustração da logo estão as minhas duas inspirações e o pq entrei neste mundo felino.</p>
+	<p>Simba foi meu segundo gato, no começo não éramos tão apegados, mas com o passar dos anos esse carinha me conquistou e ele me fez mergulhar profundamente no universo dos gatos, quis aprender tudo que podia pra cuidar melhor dele, ele era um gatinho renal e eu não entendia nada sobre isso e entender o seu mundo, me fez ter a oportunidade de conviver com ele durante 10 anos.</p>
+	<p>Em 2016 chegou Penélope, essa escaminha encantadora, a gata dos meus sonhos, minha cor preferida, fui em uma ong trabalhar como voluntária para uma campanha de adoção e acabei sendo fisgada por ela sua história é emocionante, chegou pra completar o que estava faltando. Ela é meiga, carinhosa, mas arredia com outros animais, muito assustada o que me faz cada vez mais querer aprender sobre este comportamento. Entendi que cada gato tem a sua personalidade, dentro da minha própria casa eu tinha dois gatos totalmente diferentes.</p>
+	<p>Em 2019 eu fui para a Espanha e foi lá que descobri o que eu queria realmente fazer, ser “cat sitter e especialista em comportamento felino” muitos ainda não entendem e nem aceitam que isso seja uma profissão, mas que bom que tem sido bastante reconhecida. E hoje estou aqui dando o meu melhor nos estudos e me aprofundando em tudo que posso, para levar isso para os meus clientes, seja como cat sitter ou comportamentalista (ainda preciso estudar muito).</p>
+</div>
+
+<div class="tela">
+    <div class="coluna">
+        <div class="conteudo">
+			<img src="img/missao.png" alt="gato">
+            <h1>Nossa missão</h1>
+            <p>Proporcionar cuidado excepcional e personalizado para gatos, garantindo bem-estar durante a ausência dos donos.</p>
+        </div>
+    </div>
+    <div class="coluna">
+        <div class="conteudo">
+			<img src="img/visao.png" alt="gato">
+            <h1>Nossa visão</h1>
+            <p>Ser a principal referência em serviços de cat sitter, expandindo de forma responsável mantendo qualidade inabalável.</p>
+        </div>
+    </div>
+
+    <div class="coluna">
+        <div class="conteudo">
+			<img src="img/valores.png" alt="gato">
+            <h1>Nossos valores</h1>
+            <p>Bem-estar animal, Confiança e responsabilidade, Personalização e atenção aos detalhes, Profissionalismo e excelência</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+	<a href="" title="Inicial"><div class="logo_img1"><img src="img/logo-invert.png" alt="logo"></div></a>
+	<div class="contt">
+		<p>Celular: (XX) XXXX-XXXX</p>
+		<p>E-mail: contato@.com</p>
+		<a href="https://www.instagram.com/catandsandbox/" target="_blank" title="Nos siga"><img src="img/insta.png" height="25px"></a>
+    </div>
+</footer>
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+      var $animationElements = $('.conteudo h1, .conteudo p, .conteudo img');
+
+      $(window).scroll(function() {
+        var windowHeight = $(window).height();
+        var scrollTop = $(window).scrollTop();
+
+        $animationElements.each(function() {
+          var positionTop = $(this).offset().top;
+
+          if (positionTop < windowHeight + scrollTop) {
+            $(this).addClass('show-on-scroll');
+          }
+        });
+      });
+    });
+</script>
+</body>
+</html>

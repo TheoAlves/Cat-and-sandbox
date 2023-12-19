@@ -1,0 +1,310 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+*::-webkit-scrollbar {
+    width: 8px;
+    background-color: #A6C6D3;
+    padding:2px;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #CE9AD7;
+    border-radius: 4px;
+}
+html{
+    scroll-behavior:smooth;
+	margin:0px;
+}
+body{
+    font-family: Roboto, sans-serif;
+}
+header{
+	background-color:#A6C6D3;
+} 
+header .logo_img img{
+	width:100%;
+}
+.menus{
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}	
+header .logo_img{
+	width:300px;
+	margin:0 auto;
+}
+.menu-toggle{
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 60px;
+	z-index: 999;
+	background-color:#CE9AD7;
+	height:36px;
+	border-radius:20px;
+	justify-content: center;
+	align-items: center;
+}
+/* Estilos para mostrar o menu quando a classe active está presente */
+.menu.active{
+	display: block;
+	width:100%;
+	padding-top:20px;
+	background-color: rgba(206, 154, 215, 0.9);
+	text-align:center;
+	animation: slide-down 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+	transform-origin: top;
+	max-height: 300px; /* Altura máxima do menu */
+	overflow: hidden;
+	opacity: 1;
+	z-index: 1;
+}
+.bar{
+	width: 25px;
+	height: 3px;
+	background-color: #333;
+	margin: 3px;
+}
+/* Estilos para a animação de saída da parte inferior do menu */
+.menu{
+	display: none; /* Alterado de 'display: none;' para 'display: block;' */
+	z-index: 1;
+}
+nav a{
+	transition:0.5s;
+    text-decoration: none;
+    color: #333;
+	font-family:Poppins;
+  }
+@keyframes slide-down {
+	from{
+		max-height: 0;
+	}
+	to{
+		max-height: 300px; /* Altura máxima do menu */
+	}
+}
+.intro{
+	padding:40px 20px;
+}
+.intro h1{
+	text-align:center;
+	font-family:Poppins, sans-serif;
+	font-size:50px;
+	z-index: 999; 
+	animation: slideInFromRight 2s forwards;
+	color:#863C7B;
+}
+.intro p{
+	font-family:Roboto, sans-serif;
+	font-size:20px;
+	text-align: justify;
+	z-index: 999;
+	animation: slideInFromRight 2s forwards;
+}
+.intro img{
+	margin-bottom:10px;
+	display:block;	
+	border-radius:100%;
+	z-index: 0; 
+	text-align:center;
+	width:100%;
+	right: 10px;
+	animation: imgFadeIn 2s forwards;
+}
+
+@keyframes slideInFromRight{
+	0%{
+		transform: translateX(50px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+@keyframes imgFadeIn {
+	0%{
+		opacity: 0;
+		transform: scale(0.5);
+	}
+  100% {
+		opacity: 1;
+		transform: scale(1);
+ }
+}
+.contt{
+	color:#333;
+    text-align: left;
+    padding:15px 15px 0px 15px;
+	font-size:15px;
+	font-family:Roboto, sans-serif;
+    background-color: #A6C6D3;
+}
+.logo_img1{
+	height:75px;
+	position:absolute;
+	right: 0;
+	margin-right:5px;
+}
+ .logo_img1 img {
+    height: 100%;
+}
+.contt a img{
+	transition:2s;
+}
+.contt a img:hover{
+	transition:2s;
+    opacity: 0.7;
+}
+nav a:hover, .ativado{
+	transition:0.5s;
+    color: white;
+}
+.tela{
+	padding:20px 0px;
+	background-color:#CE9AD7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.conteudo h1,
+    .conteudo p {
+      opacity: 0;
+      transform: translateX(-50px); /* Deslocamento inicial */
+      transition: opacity 2s ease, transform 2s ease; /* Transição suave */
+    }
+
+    /* Classe adicionada para mostrar os itens ao scroll */
+    .show-on-scroll {
+      opacity: 1 !important;
+      transform: translateX(0) !important; /* Mostrar o item no lugar correto */
+    }
+
+    .coluna {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .conteudo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: justify;
+    }
+
+    .conteudo img {
+      opacity: 0;
+      transform: translateY(-50px); /* Deslocamento inicial */
+      transition: opacity 2s ease, transform 2s ease; /* Transição suave */
+    }
+
+    /* Classe adicionada para mostrar a imagem ao scroll */
+    .show-img-on-scroll {
+      opacity: 1 !important;
+      transform: translateY(0) !important; /* Mostrar a imagem no lugar correto */
+    }
+@media screen and (min-width: 768px) {
+header .logo_img{
+	width:400px;
+	margin:0 auto;
+}
+.menu{
+	position: absolute;
+	width: 500px;
+	display: flex;
+	text-align:center;
+	justify-content: center;
+	align-items: center;
+	z-index: 999; 
+	background-color:#CE9AD7;
+	height:35px;
+	border-radius:20px;
+}
+.menu-toggle{
+    display: none;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+	align-items: center;
+}
+nav li{
+    margin:5px 7px;
+}
+nav a{
+    text-decoration: none;
+    color: #333;
+	font-family:Poppins, sans-serif;
+}
+.intro{
+	padding:40px 70px;
+}
+.intro h1{
+	position:relative;
+	text-align:left;
+	font-size:60px;
+	z-index: 999; 
+	margin-left:330px;
+}
+.intro img {
+	width:300px;
+	float:left;
+	position:absolute;
+	top:300px;
+	border-radius:100%;
+	left:50px;
+	z-index: 0; 
+}
+.intro p{
+	text-align:left;
+	font-size:17px;
+	margin-left:330px;
+}
+.contt{
+	font-size:18px;
+    text-align: center;
+}
+.logo_img1 {
+	height:85px;
+}
+.tela{
+	padding:20px 0px 30px 0px;
+	background-color:#CE9AD7;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.conteudo h1{
+	font-family:poppins, sans-serif;
+}
+
+.conteudo p{
+	font-family:roboto, sans-serif;
+	font-size:17px;
+	padding:0px 25px;
+}
+.coluna{
+	flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.conteudo{
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+	text-align:justify;
+}
+  
+
+}
